@@ -34,7 +34,7 @@ const Aboutus = () => {
     >
       <Grid container>
         <Grid item xl={12} lg={12} md={12} sm={12}>
-          <Heading700 styles={{ fontSize: "3.5em" }}>
+          <Heading700 styles={{ fontSize: "2.8em" }}>
             Donation Pool Total Holdings: ${totalHoldings}
           </Heading700>
         </Grid>
@@ -53,16 +53,17 @@ const Aboutus = () => {
             padding: "22px",
           }}
         >
-          <Heading700>PROGRAMMATIC PHILANTHROPY</Heading700>
+          <Heading700 styles={{fontSize:"2.6em"}}>PROGRAMMATIC PHILANTHROPY</Heading700>
           <Heading400 styles={{ color: "rgba(0, 0, 0, 0.5)" }}>
             Our platform features a distinctive model where each transaction
             with our native governance token, $GIVE, includes a 1% Donation Fee.
-          </Heading400>
-          <Heading400 styles={{ color: "rgba(0, 0, 0, 0.5)" }}>
+            <br />
+            <br />
+        
             This 1% fee is automatically directed to our Donation Pool, ensuring
             a steady stream of support for a variety of charitable causes.
-          </Heading400>
-          <Heading400 styles={{ color: "rgba(0, 0, 0, 0.5)" }}>
+          <br/>
+          <br/>
             Through the Donation Fee and Donation Pool model, CharityCoin
             actively supports both value growth and transaction volume growth of
             $GIVE to further increase the scale and size of the Donation Pool.

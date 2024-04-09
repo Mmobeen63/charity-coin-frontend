@@ -6,8 +6,8 @@ const Heading700 = ({ children, styles }) => {
     <Typography
       variant="h5"
       style={{
-        fontWeight: 700,
-        fontSize: "2em",
+        fontWeight: 500,
+      //  fontSize: "2.6em",
         color: "#000000",
         ...styles,
       }}

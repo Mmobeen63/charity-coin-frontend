@@ -109,8 +109,8 @@ const InboundForm = () => {
       style={{
         display: "flex",
         justifyContent: "center",
-        padding: "22px",
-        backgroundColor: "red",
+        padding: "102px 22px 22px 22px",
+        // backgroundColor: "red",
         backgroundImage: "linear-gradient(to bottom, #222623, #A0F8F8)",
       }}
     >
@@ -121,11 +121,10 @@ const InboundForm = () => {
           borderRadius: "8px",
         }}
       >
-        <Typography variant="h5" gutterBottom sx={{ textAlign: "center" }}>
+       
+        <Typography sx={{textAlign:"center", fontSize:"26px", fontWeight:"600"}}>
+         Contact Us
         </Typography>
-        <Heading700 styles={{textAlign:"center"}}>
-          Inbound Contact Form
-        </Heading700>
         <GeneralForm />
       </Box>
     </div>

@@ -56,8 +56,10 @@ const DonateButton = () => {
         variant="contained"
         sx={{
           backgroundColor: "#03EEFF", 
-          color: "#222623", 
-          width: "300px",
+          color: "white", 
+          // width: "200px",
+          borderRadius:"10px",
+          padding:"10px 30px",
           "&:hover": {
             backgroundColor: "#222623",
             color: "#A0F8F8",

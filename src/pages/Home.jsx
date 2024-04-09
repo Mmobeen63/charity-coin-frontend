@@ -22,7 +22,7 @@ const HomePage = () => {
       >
         <DonateButton />
       </Box>
-      <InboundForm />
+      {/* <InboundForm /> */}
     </Layout>
   );
 };

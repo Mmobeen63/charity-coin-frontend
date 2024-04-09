@@ -8,9 +8,12 @@ import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import XIcon from "@mui/icons-material/X";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { useNavigate } from "react-router-dom";
+import InboundForm from "../form/InboundForm";
 
 
 export const Footer = () => {
+  const navigate= useNavigate();
   const currentYear = new Date().getFullYear();
 
   const renderLogoAndText = () => (
@@ -68,13 +71,18 @@ export const Footer = () => {
   );
 
   return (
+    
+
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        // backgroundColor: "#FFF5E4",
+        backgroundColor: "#a0f8f8",
+        
       }}
     >
+      <InboundForm />
+
       <Divider />
       <Grid container justifyContent={"center"}>
         {renderLogoAndText()}
@@ -100,10 +108,30 @@ export const Footer = () => {
             <Typography>
               <b>Menu</b>
             </Typography>
-            <Typography>Docs</Typography>
-            <Typography>Privacy Policy</Typography>
-            <Typography>Cookies Policy</Typography>
-            <Typography>Contact</Typography>
+            <Typography  
+            sx={{cursor:"pointer"}}
+            onClick={()=>{
+              navigate('/docs')
+            }}
+            >Docs</Typography>
+            <Typography 
+            sx={{cursor:"pointer"}}
+            onClick={()=>{
+              navigate('/privacy-policy')
+            }}
+            >Privacy Policy</Typography>
+            <Typography  
+            sx={{cursor:"pointer"}}
+            onClick={()=>{
+              navigate('/cookies-policy')
+            }}
+            >Cookies Policy</Typography>
+            <Typography  
+            sx={{cursor:"pointer"}}
+            onClick={()=>{
+              navigate('/')
+            }}
+            >Contact</Typography>
           </div>
         </Grid>
       </Grid>
@@ -115,6 +143,7 @@ export const Footer = () => {
         </Typography>
       </Box>
     </Box>
+              
   );
 };
 

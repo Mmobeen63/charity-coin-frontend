@@ -7,6 +7,7 @@ import Heading700 from "../../headings/heading700";
 import useResponsivePadding from "../../reponsive/ResponsibePadding";
 import Heading400 from "../../headings/heading400";
 import { motion } from "framer-motion";
+import { fetchTokenDetails } from "./helper";
 
 const WalletDetail = () => {
   const [walletDetails, setWalletDetails] = useState(null);
@@ -15,7 +16,7 @@ const WalletDetail = () => {
 
   useEffect(() => {
     const fetchWalletDetails = async () => {
-      const walletAddress = "JTJ9Cz7i43DBeps5PZdX1QVKbEkbWegBzKPxhWgkAf1";
+      const walletAddress = "5zSTJfcXntYRFpbWj5jXJ5tATGUoDcWBYbr93jV6XPeA";
       const heliusAPIKey = "e8361445-1bc5-46c6-8851-c6e9810e7792";
 
       try {
@@ -73,14 +74,20 @@ const WalletDetail = () => {
   // Filter tokens with balance greater than 0
   const filteredTokens = walletDetails
     ? walletDetails.items
-        .filter(
-          (token) =>
-            token.token_info &&
-            token.token_info.balance > 0 &&
-            token.content.metadata
-        )
-        .slice(0, 8)
-    : [];
+        .filter((item) => item.hasOwnProperty("token_info"))
+        .filter((item) => ((item.token_info.hasOwnProperty("symbol") && (item.token_info.hasOwnProperty('balance')))))
+      .filter(
+          (token) =>{
+
+          //  const data =  fetchTokenDetails(token.content.metadata.name);
+          
+             return token.token_info.price_info.price_per_token >= 1;
+
+        }
+      )
+:
+      [];
+    console.log(filteredTokens);
 
   // Animation variants
   const variants = {
@@ -99,7 +106,6 @@ const WalletDetail = () => {
         marginBottom: "56px",
       }}
     >
-
       {isMobile ? (
         <>
           <Grid
@@ -245,10 +251,7 @@ const WalletDetail = () => {
                     flexDirection: "row",
                   }}
                 >
-                  <TokenInfo
-                    address={token.id}
-                    name={token.content.metadata.name}
-                  />
+                 {token.token_info.price_info && token.token_info.price_info.price_per_token}
                   {/* {token.id} */}
                   {/* <Heading500>{token.id}</Heading500> */}
                 </Grid>

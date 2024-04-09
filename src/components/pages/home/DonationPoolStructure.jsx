@@ -56,7 +56,7 @@ const DonationPoolStructure = () => {
         <Grid item xl={6} lg={6} md={6} sm={12}>
           <Typography
             sx={{
-              fontSize: "2.5em",
+              fontSize: "2.6em",
               marginTop: "50px",
             }}
           >
@@ -73,7 +73,7 @@ const DonationPoolStructure = () => {
                 animate="visible"
                 variants={animateOnScroll}
               >
-                <Typography sx={{ color: "#03EEEF", fontSize: "5em" }}>
+                <Typography sx={{ color: "#03EEEF", fontSize: "3em" }}>
                   {details.value}
                 </Typography>
                 <Divider width={300} color={"white"} />
