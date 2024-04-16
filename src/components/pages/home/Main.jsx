@@ -12,7 +12,7 @@ const Main = () => {
     <div
       style={{
         backgroundColor: "black",
-        minHeight: "100vh",
+        minHeight: "70vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

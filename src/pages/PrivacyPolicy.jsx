@@ -5,6 +5,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Heading700 from "../components/headings/heading700";
 import Heading400 from "../components/headings/heading400";
+import { Layout } from "../components/layout";
 
 function handleClick(event) {
   event.preventDefault();
@@ -13,6 +14,7 @@ function handleClick(event) {
 
 const BasicBreadcrumbs = () => {
   return (
+    
     <div
       role="presentation"
       onClick={handleClick}
@@ -32,6 +34,8 @@ const BasicBreadcrumbs = () => {
 
 const PrivacyPolicy = () => {
   return (
+    <Layout isHome={false}>
+      
     <Box>
       <div
         style={{
@@ -46,7 +50,7 @@ const PrivacyPolicy = () => {
           styles={{
             color: "#03EEEF",
           }}
-        >
+          >
           Privacy Policy
         </Heading700>
       </div>
@@ -57,7 +61,7 @@ const PrivacyPolicy = () => {
             marginBottom: "16px",
             textAlign: "center",
           }}
-        >
+          >
           Privacy Policy
         </Heading700>
         <Typography
@@ -109,6 +113,7 @@ const PrivacyPolicy = () => {
         </Box>
       </Box>
     </Box>
+  </Layout>
   );
 };
 

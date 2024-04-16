@@ -87,7 +87,7 @@ const WalletDetail = () => {
       )
 :
       [];
-    console.log(filteredTokens);
+    console.log(walletDetails.items);
 
   // Animation variants
   const variants = {

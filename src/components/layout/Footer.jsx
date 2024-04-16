@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import InboundForm from "../form/InboundForm";
 
 
-export const Footer = () => {
+export const Footer = ({isHome=true}) => {
   const navigate= useNavigate();
   const currentYear = new Date().getFullYear();
 
@@ -81,7 +81,9 @@ export const Footer = () => {
         
       }}
     >
+      {isHome &&
       <InboundForm />
+      }
 
       <Divider />
       <Grid container justifyContent={"center"}>
@@ -111,9 +113,9 @@ export const Footer = () => {
             <Typography  
             sx={{cursor:"pointer"}}
             onClick={()=>{
-              navigate('/docs')
+              navigate('/')
             }}
-            >Docs</Typography>
+            >Home</Typography>
             <Typography 
             sx={{cursor:"pointer"}}
             onClick={()=>{

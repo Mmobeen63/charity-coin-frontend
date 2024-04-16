@@ -24,7 +24,8 @@ const Aboutus = () => {
   return (
     <div
       style={{
-        minHeight: "100vh",
+        
+        // minHeight: "100vh",
         display: "flex",
         // flexDirection: "column",
         // justifyContent: "space-evenly",
@@ -33,8 +34,8 @@ const Aboutus = () => {
       }}
     >
       <Grid container>
-        <Grid item xl={12} lg={12} md={12} sm={12}>
-          <Heading700 styles={{ fontSize: "2.8em" }}>
+        <Grid item xl={12} lg={12} md={12} sm={12} sx={{marginTop:"40px"}} >
+          <Heading700 styles={{ fontSize: "50px" }}>
             Donation Pool Total Holdings: ${totalHoldings}
           </Heading700>
         </Grid>
@@ -47,6 +48,7 @@ const Aboutus = () => {
           sm={12}
           style={{
             display: "flex",
+             margin:"40px 0px",
             flexDirection: "column",
             justifyContent: "space-around",
             gap: "22px",

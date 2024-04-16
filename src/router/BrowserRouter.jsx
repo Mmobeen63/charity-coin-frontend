@@ -8,7 +8,7 @@ const Router = () => {
   return (
     <BrowserRouter>
     <Routes>
-
+      
       <Route  element={<HomePage />} path="/" />
       <Route element={<PrivacyPolicy />} path="/privacy-policy" />
       <Route element={<CookiesPolicy />} path="/cookies-policy" />

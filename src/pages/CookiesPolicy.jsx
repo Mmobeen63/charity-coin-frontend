@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Heading700 from "../components/headings/heading700";
+import { Layout } from "../components/layout";
 
 function handleClick(event) {
   event.preventDefault();
@@ -31,6 +32,8 @@ const BasicBreadcrumbs = () => {
 
 const CookiesPolicy = () => {
   return (
+    <Layout isHome={false}>
+
     <Box>
       <div
         style={{
@@ -40,13 +43,13 @@ const CookiesPolicy = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-      >
+        >
         <Heading700
           styles={{
             color: "#03EEEF",
           }}
         >
-          Privacy Policy
+          Cookies Policy
         </Heading700>
       </div>
       <Box sx={{ padding: "50px" }}>
@@ -57,7 +60,7 @@ const CookiesPolicy = () => {
             textAlign: "center",
           }}
         >
-          Privacy Policy
+          Cookies Policy
         </Heading700>
         <Typography
           variant="body1"
@@ -108,6 +111,7 @@ const CookiesPolicy = () => {
         </Box>
       </Box>
     </Box>
+          </Layout>
   );
 };
 

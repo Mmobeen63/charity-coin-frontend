@@ -48,7 +48,7 @@ const DonationPoolStructure = () => {
     <Box
       sx={{
         backgroundColor: "#222623",
-        padding: isMobile ? "50px 200px 100px 200px " : "22px",
+        padding: isMobile ? "50px 200px 100px 200px " : "22px 200px",
         color: "white",
       }}
     >
