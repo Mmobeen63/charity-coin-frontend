@@ -5,6 +5,7 @@ import Heading700 from "./../../headings/heading700";
 import Heading500 from "./../../headings/heading500";
 import Heading400 from "./../../headings/heading400";
 import useResponsivePadding from "../../reponsive/ResponsibePadding";
+import DonateButton from "../../Buttons/DonateButton";
 
 const Main = () => {
   const ismobile = useResponsivePadding();
@@ -80,6 +81,10 @@ const Main = () => {
               donation makes a meaningful impact towards a better world.
             </Heading400>
           </div>
+          <div style={{marginTop:"40px"}}>
+
+          <DonateButton />
+          </ div>
         </Grid>
         <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
           <div
